@@ -1,0 +1,4 @@
+Cerberus==1.3.2
+Click==7.1.2
+six==1.15.0
+threatresponse  # latest
