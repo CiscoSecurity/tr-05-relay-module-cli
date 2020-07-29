@@ -1,0 +1,17 @@
+language: python
+
+python:
+- '2.7'
+- '3.5'
+- '3.6'
+- '3.7'
+- '3.8'
+
+install:
+- pip install --upgrade .
+- pip install --upgrade --requirement test-requirements.txt
+
+script:
+- flake8 relay/
+- coverage run --source relay/ -m pytest --verbose tests/unit/ && coverage report
+- if [[ $TRAVIS_PYTHON_VERSION == 3.7 ]]; then pytest --verbose tests/functional/; fi
