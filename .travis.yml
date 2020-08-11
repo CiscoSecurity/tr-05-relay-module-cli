@@ -12,6 +12,7 @@ install:
 - pip install --upgrade --requirement test-requirements.txt
 
 script:
+- pip show threatresponse-relay
 - flake8 relay/
 - coverage run --source relay/ -m pytest --verbose tests/unit/ && coverage report
 - if [[ $TRAVIS_PYTHON_VERSION == 3.7 ]]; then pytest --verbose tests/functional/; fi

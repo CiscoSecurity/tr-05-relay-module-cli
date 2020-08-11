@@ -38,7 +38,7 @@ LONG_DESCRIPTION_CONTENT_TYPE = 'text/markdown'
 
 URL = 'https://github.com/CiscoSecurity/tr-05-relay-module-cli'
 
-AUTHOR = 'Cisco'
+AUTHOR = 'Cisco Security'
 
 LICENSE = 'MIT'
 
@@ -52,7 +52,12 @@ PYTHON_REQUIRES = '>=2.7'
 
 INSTALL_REQUIRES = read_requirements()
 
-KEYWORDS = ['cisco', 'threat', 'response', 'relay', 'module', 'cli', 'python']
+KEYWORDS = [
+    'cisco', 'security',
+    'threat', 'response',
+    'relay', 'module', 'cli',
+    'python',
+]
 
 CLASSIFIERS = [
     'Intended Audience :: Developers',

@@ -2,22 +2,22 @@
 
 # Threat Response Relay Module CLI
 
-A collection of useful Python CLI commands for managing Threat Response Relay
+Collection of useful Python CLI commands for managing Threat Response Relay
 modules.
 
 ## Installation
 
 * Local
 
-```bash
+```
 pip install --upgrade .
 pip show threatresponse-relay
 ```
 
 * GitHub
 
-```bash
-pip install --upgrade git+ssh://git@github.com/CiscoSecurity/tr-05-relay-module-cli.git[@branch_name_or_release_version]
+```
+pip install --upgrade git+https://github.com/CiscoSecurity/tr-05-relay-module-cli.git[@branch_name_or_release_version]
 pip show threatresponse-relay
 ```
 
@@ -25,7 +25,7 @@ pip show threatresponse-relay
 
 * `relay --help`
 
-```bash
+```
 Usage: relay [OPTIONS] COMMAND [ARGS]...
 
 Options:
@@ -39,7 +39,7 @@ Commands:
 
 * `relay add --help`
 
-```bash
+```
 Usage: relay add [OPTIONS]
 
 Options:
@@ -69,7 +69,7 @@ such a file may look like.
 Notice that in order not to hard-code any sensitive values to the file itself,
 it is possible to use template strings instead of real values.
 E.g.:
-```bash
+```json
 {
   ...
   "name": "$NAME",
@@ -89,20 +89,20 @@ This is a very simplified version of shell parameter expansion/substitution.
 necessary environment variables to some `.env` file and then reading them into
 the child process (i.e. the actual command) environment prior to the execution.
 E.g.:
-```bash
+```
 env $(cat .env | xargs) relay add ...
 ```
 It is also possible to use `export` instead of `env`, but the latter one allows
 not to clutter the parent process environment with redundant variables.
 E.g.:
-```bash
+```
 export $(cat .env | xargs) && relay add ...
 ```
 When in doubt, prefer `env` to `export` anyway.
 
 * `relay edit --help`
 
-```bash
+```
 Usage: relay edit [OPTIONS]
 
 Options:
@@ -125,7 +125,7 @@ In order to rename the module it is possible to use the combination of `remove`
 
 * `relay remove --help`
 
-```bash
+```
 Usage: relay remove [OPTIONS]
 
 Options:
