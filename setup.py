@@ -40,6 +40,8 @@ URL = 'https://github.com/CiscoSecurity/tr-05-relay-module-cli'
 
 AUTHOR = 'Cisco Security'
 
+AUTHOR_EMAIL = 'https://gitter.im/CiscoSecurity/Threat-Response'
+
 LICENSE = 'MIT'
 
 ENTRY_POINTS = {
@@ -82,6 +84,7 @@ setuptools.setup(
     long_description_content_type=LONG_DESCRIPTION_CONTENT_TYPE,
     url=URL,
     author=AUTHOR,
+    author_email=AUTHOR_EMAIL,
     license=LICENSE,
     entry_points=ENTRY_POINTS,
     packages=PACKAGES,
